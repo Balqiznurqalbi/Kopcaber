@@ -367,7 +367,7 @@ return [
         ],
         [
             'text' => 'Master Data',
-            'url'  => 'settings',
+            'url'  => 'master',
             'icon' => 'fas fa-grip-horizontal',
             // 'can' => ['jenis-simpanan-index', 'anggota-index', 'barang-index', 'unit-kerja'],
             'submenu' => [
@@ -379,7 +379,7 @@ return [
                 // ],
                 [
                     'text' => 'Anggota',
-                    'url'  => 'anggota',
+                    'url'  => 'master/anggota-index',
                     'icon' => 'fas fa-fw fa-user',
                     // 'active' => ['anggota/*'],
                 ],
