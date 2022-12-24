@@ -1,11 +1,7 @@
-{{-- template --}}
-{{-- <x-input label="Name" type="text" inputId="modelname"  placeholder="" description="This is Name" value="" ></x-input> --}}
-
-{{-- <x-input label="Password vertical" type="password" inputId="modelname" inputType="vertical" placeholder="" description="This is Password" value="" ></x-input> --}}
-
 @props([
     'inputId'=>'',
     'name'=>'',
+    'inputWidth'=>'col-sm-12',
     'label'=>'',
     'type'=>'text',
     'inputLayout'=>'horizontal',
@@ -13,9 +9,10 @@
     'formColor'=>'indigo',
     'textColor'=>'gray',
     'shadow'=>'shadow-sm',
-    'leading'=>'',
+    'prepend'=>'',
+    'append'=>'',
     'template'=>'2-10',
-    'trailing'=>'',
+
 ])
 
 @php
@@ -51,7 +48,7 @@
     if($inputLayout=='horizontal') {
         $classGroup='mb-3 row';
         $classColsLabel=$labelWidth.' col-form-label';
-        $classColsInput=$inputWidth;
+        $classColsInput=$inputWidth.' row';
     }elseif ($inputLayout == 'vertical'){
         $classGroup='form-group';
         $classColsLabel='';
@@ -64,34 +61,28 @@
             $layoutLabel='';
         }
     }
-    $inputGroupStart='';
-    $inputGroupEnd='';
-    $leadingSection='';
-    $trailingSection='';
-    if ($leading || $trailing) {
-        $inputGroupStart='<div class="input-group mb-3">';
-        $inputGroupEnd='</div>';
+    $prependSlot='';
+    $appendSlot='';
+    if ($prepend != null){
+        $prependSlot='<div class="input-group-prepend">
+            <span class="input-group-text">'.$prepend.'</span>
+        </div>';
     }
-    if ($leading) {
-        $leadingSection='<span class="input-group-text leading">'.$leading.'</span>';
-    }
-    if ($trailing) {
-        $trailingSection='<span class="input-group-text trailing">'.$trailing.'</span>';
+    if ($append != null){
+        $appendSlot='<div class="input-group-prepend">
+            <span class="input-group-text">'.$append.'</span>
+        </div>';
     }
 @endphp
 
-
 <div class="{{$classGroup}}">
     {!!$layoutLabel!!}
-    <div class="{{$classColsInput}}">
-
-        {!!$inputGroupStart!!}
-            {!!$leadingSection!!}
-            <input type="{{ $type }}" {{ $attributes->merge(['id'=>$inputId, 'name'=>$modelName, 'class'=>'form-control' ])}}/>
-            {!!$trailingSection!!}
-        {!!$inputGroupEnd!!}
-
-        {!!$desc!!}
+    <div class="{{$classColsInput}} ">
+        <div class="input-group {{$inputWidth}} pr-0">
+            {!!$prependSlot!!}
+            <input type="{{ $type }}" {{ $attributes->merge(['id'=>$inputId, 'name'=>$modelName, 'class'=>'form-control' ])}} >
+            {!!$appendSlot!!}
+        </div>
 
         @if($errors->has($model))
             <span class="invalid-feedback d-block" role="alert">
@@ -99,7 +90,9 @@
             </span>
         @endif
     </div>
+    {!!$desc!!}
+
+
+
 </div>
-
-
 

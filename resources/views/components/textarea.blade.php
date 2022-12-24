@@ -1,21 +1,18 @@
 {{-- template --}}
-{{-- <x-input label="Name" type="text" inputId="modelname"  placeholder="" description="This is Name" value="" ></x-input> --}}
+{{-- <x-textarea label="Email vertical" type="email" inputId="modelname" inputType="vertical" placeholder="" description="This is Email"  rows="3">Value</x-textarea> --}}
 
-{{-- <x-input label="Password vertical" type="password" inputId="modelname" inputType="vertical" placeholder="" description="This is Password" value="" ></x-input> --}}
+{{-- <x-textarea label="Email" type="email" inputId="modelname"  placeholder="" description="This is Email"  rows="3">Value</x-textarea> --}}
 
 @props([
     'inputId'=>'',
     'name'=>'',
     'label'=>'',
-    'type'=>'text',
     'inputLayout'=>'horizontal',
     'description'=>'',
     'formColor'=>'indigo',
     'textColor'=>'gray',
-    'shadow'=>'shadow-sm',
-    'leading'=>'',
     'template'=>'2-10',
-    'trailing'=>'',
+    'shadow'=>'shadow-sm',
 ])
 
 @php
@@ -23,7 +20,6 @@
     if($description){
         $desc='<small  class="form-text text-muted">'.$description.'</small>';
     }
-
 
 
     if($inputId){
@@ -48,49 +44,21 @@
         $labelWidth='col-sm-4';
         $inputWidth='col-sm-8';
     }
-    if($inputLayout=='horizontal') {
+    if($inputLayout=="horizontal") {
         $classGroup='mb-3 row';
         $classColsLabel=$labelWidth.' col-form-label';
         $classColsInput=$inputWidth;
-    }elseif ($inputLayout == 'vertical'){
+    }elseif ($inputLayout == "vertical"){
         $classGroup='form-group';
         $classColsLabel='';
         $classColsInput='';
     }
-
-    $layoutLabel='<label for="'.$inputId.'" class="'.$classColsLabel.'">'.$label.'</label>';
-    if ($inputLayout == 'vertical'){
-        if ($label == null) {
-            $layoutLabel='';
-        }
-    }
-    $inputGroupStart='';
-    $inputGroupEnd='';
-    $leadingSection='';
-    $trailingSection='';
-    if ($leading || $trailing) {
-        $inputGroupStart='<div class="input-group mb-3">';
-        $inputGroupEnd='</div>';
-    }
-    if ($leading) {
-        $leadingSection='<span class="input-group-text leading">'.$leading.'</span>';
-    }
-    if ($trailing) {
-        $trailingSection='<span class="input-group-text trailing">'.$trailing.'</span>';
-    }
 @endphp
 
-
 <div class="{{$classGroup}}">
-    {!!$layoutLabel!!}
+    <label for="{{$inputId}}" class="{{$classColsLabel}}">{{$label}}</label>
     <div class="{{$classColsInput}}">
-
-        {!!$inputGroupStart!!}
-            {!!$leadingSection!!}
-            <input type="{{ $type }}" {{ $attributes->merge(['id'=>$inputId, 'name'=>$modelName, 'class'=>'form-control' ])}}/>
-            {!!$trailingSection!!}
-        {!!$inputGroupEnd!!}
-
+        <textarea {{ $attributes->merge(['id'=>$inputId, 'name'=>$modelName, 'class'=>'form-control' ])}} >{{$slot}}</textarea>
         {!!$desc!!}
 
         @if($errors->has($model))
