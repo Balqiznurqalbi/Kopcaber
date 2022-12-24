@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnggotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,23 +24,19 @@ Route::get('/home', function () {
 
 require __DIR__.'/auth.php';
 
-Auth::routes();
+// Route::get('/master/anggota-index', 'AnggotaController@index')->name('anggota-index.index');
+Route::get('master/anggota-index', 'App\Http\Controllers\AnggotaController@index');
+Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => 'anggota']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
-
-Route::resource('anggota', \App\Http\Controllers\AnggotaController::class)
-    ->middleware('auth');
