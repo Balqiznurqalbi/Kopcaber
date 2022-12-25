@@ -321,7 +321,7 @@ return [
         // ['header' => 'account_settings'],
         [
             'text' => 'Beranda',
-            'url'  => 'admin/settings',
+            'url'  => '/home',
             'icon' => 'fas fa-fw fa-home',
         ],
         // [
