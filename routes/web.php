@@ -26,6 +26,7 @@ require __DIR__.'/auth.php';
 
 // Route::get('/master/anggota-index', 'AnggotaController@index')->name('anggota-index.index');
 Route::get('master/anggota-index', 'App\Http\Controllers\AnggotaController@index');
+Route::get('master/anggota-index/create', 'App\Http\Controllers\AnggotaController@create');
 Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => 'anggota']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
