@@ -45,6 +45,7 @@ class AnggotaController extends Controller
             'no_telp' => 'required',
             'tgl_daftar' => 'required',
             'aktif' => 'required',
+            'npa' => 'required',
             'no_akun' => 'required',
             'bank' => 'required',
             'username' => 'required',

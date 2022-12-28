@@ -349,7 +349,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Data Pengajuan',
-                    'url'  => '#',
+                    'url'  => 'pinjaman/data-pengajuan',
                 ],
                 [
                     'text' => 'Data Angsuran',
@@ -357,7 +357,7 @@ return [
                 ],
                 [
                     'text' => 'Data Pinjaman',
-                    'url'  => '#',
+                    'url'  => 'pinjaman/data-pinjaman',
                 ],
                 [
                     'text' => 'Pinjaman Lunas',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DataPengajuan;
 use Illuminate\Http\Request;
 
 class DataPengajuanController extends Controller
@@ -13,7 +14,8 @@ class DataPengajuanController extends Controller
      */
     public function index()
     {
-        //
+        // $pengajuan = DataPengajuan::all();
+        return view('data-pengajuan.index');
     }
 
     /**
