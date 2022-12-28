@@ -66,7 +66,7 @@
             <span class="info-box-icon bg-info"><i class="fas fa-fw fa-book"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Pinjaman</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">20</span>
             </div>
         </div>
     </div>
