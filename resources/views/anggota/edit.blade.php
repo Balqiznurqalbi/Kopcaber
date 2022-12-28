@@ -18,13 +18,13 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Nama</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputName" placeholder="Nama lengkap" name="name" value="{{old('name'), $model->name}}">
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputName" placeholder="Nama lengkap" name="name" value="{{old('nama'), $anggota->nama}}">
                         @error('name') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">NIK</label>
-                        <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 3212155610010001" name="nik" value="{{old('nik')}}">
+                        <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 3212155610010001" name="nik" value="{{old('nik'), $anggota->nik}}">
                         @error('nik') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
