@@ -37,8 +37,17 @@ Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => '
 
 Route::get('pinjaman/data-pinjaman', 'App\Http\Controllers\DataPinjamanController@index');
 Route::get('pinjaman/data-pinjaman-show/{id}', 'App\Http\Controllers\DataPinjamanController@show');
+Route::get('pinjaman/data-pinjaman-create', 'App\Http\Controllers\DataPinjamanController@create');
+Route::post('pinjaman/data-pinjaman-store', 'App\Http\Controllers\DataPinjamanController@store');
+Route::get('pinjaman/data-pinjaman/{id}/edit', 'App\Http\Controllers\DataPinjamanController@edit');
+Route::put('pinjaman/data-pinjaman/{id}', 'App\Http\Controllers\DataPinjamanController@update');
+
 Route::get('pinjaman/data-pengajuan', 'App\Http\Controllers\DataPengajuanController@index');
-Route::get('pinjaman/data-pinjaman-show/{id}', 'App\Http\Controllers\DataPengajuanController@show');
+Route::get('pinjaman/data-pengajuan-show/{id}', 'App\Http\Controllers\DataPengajuanController@show');
+Route::get('pinjaman/data-pengajuan-create', 'App\Http\Controllers\DataPengajuanController@create');
+Route::post('pinjaman/data-pengajuan-store', 'App\Http\Controllers\DataPengajuanController@store');
+Route::get('pinjaman/data-pengajuan/{id}/edit', 'App\Http\Controllers\DataPengajuanController@edit');
+Route::put('pinjaman/data-pengajuan/{id}', 'App\Http\Controllers\DataPengajuanController@update');
 Route::resource('data-pengajuan', DataPengajuanController::class)->parameters(['data-pengajuans' => 'data-pengajuan']);
 Route::resource('data-pinjaman', DataPinjamanController::class)->parameters(['data-pinjamans' => 'data-pinjaman']);
 
