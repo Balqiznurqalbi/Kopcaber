@@ -3,7 +3,7 @@
 @section('title', 'Tambah User')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Tambah User</h1>
+    <h1 class="m-0 text-dark">Tambah Anggota</h1>
 @stop
 
 @section('content')
@@ -17,6 +17,12 @@
                     <div class="form-group">
                         <label for="exampleInputName">Nama</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputName" placeholder="Nama lengkap" name="name" value="{{old('name')}}">
+                        @error('name') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">NIK</label>
+                        <input type="text" class="form-control @error('nik') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 3212155610010001" name="name" value="{{old('nik')}}">
                         @error('name') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
