@@ -70,6 +70,7 @@ class AnggotaController extends Controller
      */
     public function edit(Anggota $anggota)
     {
+        // $anggota = Anggota::all();
         return view('anggota.edit', compact('anggota'));
     }
 
