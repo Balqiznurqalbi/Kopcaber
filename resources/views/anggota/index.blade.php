@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <a href="" class="btn btn-primary mb-2">
+                    <a href="{{route('anggota.create')}}" class="btn btn-primary mb-2">
                         Tambah
                     </a>
 
