@@ -28,14 +28,14 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Jenis Kelamin</label>
-                        <input type="text" class="form-control @error('jenis kelamin') is-invalid @enderror" id="exampleInputName" placeholder="pria/wanita" name="jenis kelamin" value="{{old('jenis kelamin')}}">
-                        @error('jenis kelamin') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('jk') is-invalid @enderror" id="exampleInputName" placeholder="pria/wanita" name="jenis kelamin" value="{{old('jk')}}">
+                        @error('jk') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Tempat Lahir</label>
-                        <input type="text" class="form-control @error('tempat lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Jakarta" name="tempat lahir" value="{{old('tempat lahir')}}">
-                        @error('tempat lahir') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('tmp_lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Jakarta" name="tempat lahir" value="{{old('')}}">
+                        @error('tmp_lahir') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -121,7 +121,7 @@
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword" placeholder="Password" name="password">
                         @error('password') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="exampleInputPassword">Konfirmasi Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword" placeholder="Konfirmasi Password" name="password_confirmation">
