@@ -3,39 +3,39 @@
 @section('title', 'Tambah User')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Tambah Anggota</h1>
+<h1 class="m-0 text-dark">Tambah Anggota</h1>
 @stop
 
 @section('content')
-    <form action="{{route('anggota.store')}}" method="post">
-        @csrf
+<form action="{{route('anggota.store')}}" method="post">
+    @csrf
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
 
                     <div class="form-group">
+                        <label for="exampleInputName">Nama</label>
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan nama lengkap" name="nama" value="{{old('nama')}}">
+                        @error('nama') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleInputName">Nomor Pengajuan</label>
-                        <input type="text" class="form-control @error('nomor pengajuan') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan No. Pengajuan" name="nomor pengajuan" value="{{old('nomor pengajuan')}}">
-                        @error('nomor pengajuan') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('no_pengajuan') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan No. Pengajuan" name="no_pengajuan" value="{{old('no_pengajuan')}}">
+                        @error('no_pengajuan') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Nomor Anggota</label>
-                        <input type="text" class="form-control @error('nomor anggota') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan No. Anggota" name="nik" value="{{old('nomor anggota')}}">
-                        @error('nomor anggota') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputName">Nama Anggota</label>
-                        <input type="text" class="form-control @error('nama anggota') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Nama Anggota" name="nama anggota" value="{{old('nama anggota')}}">
-                        @error('nama anggota') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('no_anggota') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan No. Anggota" name="no_anggota" value="{{old('no_anggota')}}">
+                        @error('no_anggota') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Jenis Pengajuan</label>
-                        <input type="text" class="form-control @error('jenis pengajuan') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Biasa/Insidentil" name="jenis pengajuan" value="{{old('jenis pengajuan')}}">
-                        @error('jenis pengajuan') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('jenis_pengajuan') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Biasa/Insidentil" name="jenis_pengajuan" value="{{old('jenis_pengajuan')}}">
+                        @error('jenis_pengajuan') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -67,4 +67,4 @@
             </div>
         </div>
     </div>
-@stop
+    @stop
