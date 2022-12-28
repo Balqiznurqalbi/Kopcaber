@@ -47,17 +47,18 @@ class AnggotaController extends Controller
             'aktif' => 'required',
             'no_akun' => 'required',
             'bank' => 'required',
-            'username' => 'required',
+            // 'username' => 'required',
             'email' => 'required',
-            'password' => 'required',
+            // 'password' => 'required',
         ]);
         Anggota::create($request->all());
 
         return redirect(route('anggota.index'))->with('success', 'Data Berhasil Disimpan');
     }
 
-    public function show($id)
+    public function show(Anggota $anggota)
     {
+        // $anggota = Anggota::find($id);
         return view('anggota.show',compact('anggota'));
     }
 
@@ -98,9 +99,9 @@ class AnggotaController extends Controller
             'npa' => 'required',
             'no_akun' => 'required',
             'bank' => 'required',
-            'username' => 'required',
+            // 'username' => 'required',
             'email' => 'required',
-            'password' => 'required',
+            // 'password' => 'required',
         ]);
         $anggota->update($request->all());
 

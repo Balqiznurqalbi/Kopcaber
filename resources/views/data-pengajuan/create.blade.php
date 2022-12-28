@@ -3,11 +3,11 @@
 @section('title', 'Tambah User')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Tambah Anggota</h1>
+<h1 class="m-0 text-dark">Tambah Data Pengajuan</h1>
 @stop
 
 @section('content')
-<form action="{{route('anggota.store')}}" method="post">
+<form action="{{route('data-pengajuan.store')}}" method="post">
     @csrf
     <div class="row">
         <div class="col-12">
@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Lama Angsuran</label>
-                        <input type="text" class="form-control @error('lama angsuran') is-invalid @enderror" id="exampleInputName" placeholder="3 bulan/ 6 bulan/ 12 bulan" name="angsuran" value="{{old('angsuran')}}">
+                        <input type="text" class="form-control @error('lama_angsuran') is-invalid @enderror" id="exampleInputName" placeholder="3 bulan/ 6 bulan/ 12 bulan" name="angsuran" value="{{old('angsuran')}}">
                         @error('lama angsuran') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
