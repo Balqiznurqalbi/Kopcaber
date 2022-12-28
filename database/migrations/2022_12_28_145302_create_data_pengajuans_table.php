@@ -21,8 +21,7 @@ class CreateDataPengajuansTable extends Migration
             $table->string('jenis_pengajuan',225)->nullable();
             $table->string('nominal',225)->nullable();
             $table->string('lama_angsuran',225)->nullable();
-            $table->string('jenis_pengajuan',225)->nullable();
-            $table->string('',225)->nullable();
+            $table->string('keterangan',225)->nullable();
             // $table->date('tgl_lahir')->nullable();
             $table->timestamps();
         });
