@@ -31,6 +31,8 @@ Route::get('master/anggota-index', 'App\Http\Controllers\AnggotaController@index
 Route::get('master/anggota-create', 'App\Http\Controllers\AnggotaController@create');
 Route::post('master/anggota-store', 'App\Http\Controllers\AnggotaController@store');
 Route::get('master/anggota-show/{id}', 'App\Http\Controllers\AnggotaController@show');
+Route::get('master/anggota-edit/{id}/edit', 'App\Http\Controllers\AnggotaController@edit');
+Route::put('master/anggota-update/{id}', 'App\Http\Controllers\AnggotaController@update');
 Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => 'anggota']);
 
 Route::get('pinjaman/data-pinjaman', 'App\Http\Controllers\DataPinjamanController@index');

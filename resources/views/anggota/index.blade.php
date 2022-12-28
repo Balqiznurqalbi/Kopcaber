@@ -40,7 +40,7 @@
                                 <td>{{$ang->alamat}}</td>
                                 <td>{{$ang->no_telp}}</td>
                                 <td>
-                                    <a href="" class="btn btn-primary btn-xs">
+                                    <a href="{{ route('anggota.edit', $ang->id)}}" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
                                     <a class="btn btn-info btn-xs" href="{{ route('anggota.show', $ang->id)}}">Show</a>
