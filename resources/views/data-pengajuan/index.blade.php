@@ -43,6 +43,7 @@
                                     <a href="" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
+                                    <a class="btn btn-info btn-xs" href="{{ route('data-pengajuan.show', $peng->id)}}">Show</a>
                                     <a href="" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
                                         Delete
                                     </a>
