@@ -26,11 +26,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {{-- @foreach($pengajuan as $peng) --}}
+                        @foreach($pengajuan as $peng)
                             <tr>
-                                {{-- <td>{{$key+1}}</td>
-                                <td>{{$ang->name}}</td>
-                                <td>{{$ang->email}}</td> --}}
+                                {{-- <td>{{$peng+1}}</td> --}}
+                                {{-- <td>{{$peng->name}}</td> --}}
+                                {{-- <td>{{$peng->email}}</td> --}}
                                 <td>
                                     <a href="" class="btn btn-primary btn-xs">
                                         Edit
@@ -40,7 +40,7 @@
                                     </a>
                                 </td>
                             </tr>
-                        {{-- @endforeach --}}
+                        @endforeach
                         </tbody>
                     </table>
 

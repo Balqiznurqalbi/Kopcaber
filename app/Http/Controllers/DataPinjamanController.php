@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DataPinjaman;
 use Illuminate\Http\Request;
 
 class DataPinjamanController extends Controller
@@ -13,7 +14,8 @@ class DataPinjamanController extends Controller
      */
     public function index()
     {
-        //
+        $pinjaman = DataPinjaman::all();
+        return view('data-pinjaman.index', compact('pinjaman'));
     }
 
     /**
@@ -23,7 +25,7 @@ class DataPinjamanController extends Controller
      */
     public function create()
     {
-        //
+        return view('data-pinjaman.create');
     }
 
     /**
@@ -34,7 +36,18 @@ class DataPinjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => ['required', 'string', 'max:200'],
+            'no_pengajuan' => 'required',
+            'no_anggota' => 'required',
+            'jenis_pengajuan' => 'required',
+            'nominal' => 'required',
+            'lama_angsuran' => 'required',
+            'keterangan' => 'required',
+        ]);
+        DataPinjaman::create($request->all());
+
+        return redirect(route('data-pinjaman.index'))->with('success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -45,7 +58,7 @@ class DataPinjamanController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('data-pinjaman.show');
     }
 
     /**
@@ -56,7 +69,7 @@ class DataPinjamanController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('data-pinjaman.edit');
     }
 
     /**
@@ -66,9 +79,20 @@ class DataPinjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, DataPinjaman $pinjaman)
     {
-        //
+        $request->validate([
+            'nama' => ['required', 'string', 'max:200'],
+            'no_pengajuan' => 'required',
+            'no_anggota' => 'required',
+            'jenis_pengajuan' => 'required',
+            'nominal' => 'required',
+            'lama_angsuran' => 'required',
+            'keterangan' => 'required',
+        ]);
+        $pinjaman->update($request->all());
+
+        return redirect(route('data-pinjaman.index'))->with('success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -77,8 +101,10 @@ class DataPinjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(DataPinjaman $pinjaman)
     {
-        //
+        $pinjaman->delete();
+
+        return redirect(route('data-pinjaman.index'))->with('success', 'Data Berhasil Dihapus');
     }
 }

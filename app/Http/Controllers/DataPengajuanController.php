@@ -14,8 +14,8 @@ class DataPengajuanController extends Controller
      */
     public function index()
     {
-        // $pengajuan = DataPengajuan::all();
-        return view('data-pengajuan.index');
+        $pengajuan = DataPengajuan::all();
+        return view('data-pengajuan.index', compact('pengajuan'));
     }
 
     /**
@@ -36,7 +36,18 @@ class DataPengajuanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => ['required', 'string', 'max:200'],
+            'no_pengajuan' => 'required',
+            'no_anggota' => 'required',
+            'jenis_pengajuan' => 'required',
+            'nominal' => 'required',
+            'lama_angsuran' => 'required',
+            'keterangan' => 'required',
+        ]);
+        DataPengajuan::create($request->all());
+
+        return redirect(route('data-pengajuan.index'))->with('success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -47,7 +58,7 @@ class DataPengajuanController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('data-pengajuan.show');
     }
 
     /**
@@ -58,7 +69,7 @@ class DataPengajuanController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('data-pengajuan.edit');
     }
 
     /**
@@ -68,9 +79,20 @@ class DataPengajuanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, DataPengajuan $pengajuan)
     {
-        //
+        $request->validate([
+            'nama' => ['required', 'string', 'max:200'],
+            'no_pengajuan' => 'required',
+            'no_anggota' => 'required',
+            'jenis_pengajuan' => 'required',
+            'nominal' => 'required',
+            'lama_angsuran' => 'required',
+            'keterangan' => 'required',
+        ]);
+        $pengajuan->update($request->all());
+
+        return redirect(route('data-pengajuan.index'))->with('success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -79,8 +101,10 @@ class DataPengajuanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(DataPengajuan $pengajuan)
     {
-        //
+        $pengajuan->delete();
+
+        return redirect(route('data-pengajuan.index'))->with('success', 'Data Berhasil Dihapus');
     }
 }
