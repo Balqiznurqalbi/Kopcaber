@@ -22,16 +22,22 @@
                             <th>No.</th>
                             <th>Nomor Pengajuan</th>
                             <th>Nomor Anggota</th>
+                            <th>Nama Anggota</th>
                             <th>Nominal</th>
                             <th>Opsi</th>
                         </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $no = 1;
+                            @endphp
                         @foreach($pengajuan as $peng)
                             <tr>
-                                {{-- <td>{{$peng+1}}</td> --}}
-                                {{-- <td>{{$peng->name}}</td> --}}
-                                {{-- <td>{{$peng->email}}</td> --}}
+                                <td>{{$no++}}</td>
+                                <td>{{$peng->no_pengajuan}}</td>
+                                <td>{{$peng->no_anggota}}</td>
+                                <td>{{$peng->nama_anggota}}</td>
+                                <td>{{$peng->nominal}}</td>
                                 <td>
                                     <a href="" class="btn btn-primary btn-xs">
                                         Edit

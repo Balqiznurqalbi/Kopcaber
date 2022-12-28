@@ -21,16 +21,24 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Email</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Alamat</th>
+                            <th>No. Telp</th>
                             <th>Opsi</th>
                         </tr>
                         </thead>
                         <tbody>
+
                         @foreach($anggota as $ang)
+                            @php
+                                $no = 1;
+                            @endphp
                             <tr>
-                                {{-- <td>{{$key+1}}</td>
-                                <td>{{$ang->name}}</td>
-                                <td>{{$ang->email}}</td> --}}
+                                <td>{{$no++}}</td>
+                                <td>{{$ang->nama}}</td>
+                                <td>{{$ang->jk}}</td>
+                                <td>{{$ang->alamat}}</td>
+                                <td>{{$ang->no_telp}}</td>
                                 <td>
                                     <a href="" class="btn btn-primary btn-xs">
                                         Edit
