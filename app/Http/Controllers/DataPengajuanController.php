@@ -25,7 +25,7 @@ class DataPengajuanController extends Controller
      */
     public function create()
     {
-        //
+        return view('data-pengajuan.create');
     }
 
     /**
