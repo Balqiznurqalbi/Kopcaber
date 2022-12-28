@@ -46,7 +46,7 @@
             <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data petugas</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">15</span>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
             <span class="info-box-icon bg-info"><i class="far fa-file"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Simpanan</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">30</span>
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
             <span class="info-box-icon bg-info"><i class="fas fa-fw fa-book"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Pinjaman</span>
-                <span class="info-box-number">20</span>
+                <span class="info-box-number">35</span>
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
             <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Anggota</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">10</span>
             </div>
         </div>
     </div>
@@ -86,7 +86,7 @@
             <span class="info-box-icon bg-info"><i class="far fa-bookmark"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Kategori Simpanan</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">20</span>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
             <span class="info-box-icon bg-info"><i class="ffas fa-fw fa-money-bill"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Data Angsuran</span>
-                <span class="info-box-number">1,410</span>
+                <span class="info-box-number">25</span>
             </div>
         </div>
     </div>
