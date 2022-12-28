@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Lama Angsuran</label>
-                        <input type="text" class="form-control @error('lama angsuran') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Berapa Lama Angsuran" name="angsuran" value="{{old('angsuran')}}">
+                        <input type="text" class="form-control @error('lama angsuran') is-invalid @enderror" id="exampleInputName" placeholder="3 bulan/ 6 bulan/ 12 bulan" name="angsuran" value="{{old('angsuran')}}">
                         @error('lama angsuran') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
