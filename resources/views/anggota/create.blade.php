@@ -28,20 +28,20 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Jenis Kelamin</label>
-                        <input type="text" class="form-control @error('jk') is-invalid @enderror" id="exampleInputName" placeholder="pria/wanita" name="jenis kelamin" value="{{old('jk')}}">
+                        <input type="text" class="form-control @error('jk') is-invalid @enderror" id="exampleInputName" placeholder="pria/wanita" name="jk" value="{{old('jk')}}">
                         @error('jk') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Tempat Lahir</label>
-                        <input type="text" class="form-control @error('tmp_lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Jakarta" name="tempat lahir" value="{{old('')}}">
+                        <input type="text" class="form-control @error('tmp_lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Jakarta" name="tmp_lahir" value="{{old('tmp_lahir')}}">
                         @error('tmp_lahir') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Tanggal Lahir</label>
-                        <input type="text" class="form-control @error('tanggal lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 20 mei 2001" name="tanggal lahir" value="{{old('tanggal lahir')}}">
-                        @error('tanggal lahir') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('tgl_lahir') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 20 mei 2001" name="tgl_lahir" value="{{old('tgl_lahir')}}">
+                        @error('tgl_lahir') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -76,14 +76,14 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Nomor telfon</label>
-                        <input type="text" class="form-control @error('nomor telfon') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 08XXXXXXXXX" name="nomor telfon" value="{{old('nomor telfon')}}">
-                        @error('nomor telfon') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('no_telp') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 08XXXXXXXXX" name="no_telp" value="{{old('no_telp')}}">
+                        @error('no_telp') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputName">Tanggal Daftar</label>
-                        <input type="text" class="form-control @error('tanggal daftar') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 12 agustus 2022" name="tanggal daftar" value="{{old('tanggal daftar')}}">
-                        @error('tanggal daftar') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('tgl_daftar') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 12 agustus 2022" name="tgl_daftar" value="{{old('tgl_daftar')}}">
+                        @error('tgl_daftar') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -94,8 +94,8 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">Nomor Akun</label>
-                        <input type="text" class="form-control @error('nomor akun') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 3212" name="nomor akun" value="{{old('nomor akun')}}">
-                        @error('nomor akun') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('no_akun') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : 3212" name="no_akun" value="{{old('no_akun')}}">
+                        @error('no_akun') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -106,8 +106,8 @@
 
                     <div class="form-group">
                         <label for="exampleInputName">User Name</label>
-                        <input type="text" class="form-control @error('user name') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Embuls" name="user name" value="{{old('user name')}}">
-                        @error('user name') <span class="text-danger">{{$message}}</span> @enderror
+                        <input type="text" class="form-control @error('username') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Embuls" name="username" value="{{old('username')}}">
+                        @error('username') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -121,7 +121,6 @@
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword" placeholder="Password" name="password">
                         @error('password') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
-
                     <div class="form-group">
                         <label for="exampleInputPassword">Konfirmasi Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword" placeholder="Konfirmasi Password" name="password_confirmation">
