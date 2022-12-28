@@ -3,7 +3,7 @@
 @section('title', 'List User')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">List User</h1>
+    <h1 class="m-0 text-dark">Data Pinjaman</h1>
 @stop
 
 @section('content')
@@ -21,7 +21,9 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Email</th>
+                            <th>Nomor Pengajuan</th>
+                            <th>Nomor Anggota</th>
+                            <th>Nominal</th>
                             <th>Opsi</th>
                         </tr>
                         </thead>
