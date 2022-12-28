@@ -34,7 +34,9 @@ Route::get('master/anggota-show/{id}', 'App\Http\Controllers\AnggotaController@s
 Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => 'anggota']);
 
 Route::get('pinjaman/data-pinjaman', 'App\Http\Controllers\DataPinjamanController@index');
+Route::get('pinjaman/data-pinjaman-show/{id}', 'App\Http\Controllers\DataPinjamanController@show');
 Route::get('pinjaman/data-pengajuan', 'App\Http\Controllers\DataPengajuanController@index');
+Route::get('pinjaman/data-pinjaman-show/{id}', 'App\Http\Controllers\DataPengajuanController@show');
 Route::resource('data-pengajuan', DataPengajuanController::class)->parameters(['data-pengajuans' => 'data-pengajuan']);
 Route::resource('data-pinjaman', DataPinjamanController::class)->parameters(['data-pinjamans' => 'data-pinjaman']);
 

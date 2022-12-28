@@ -20,23 +20,33 @@
                         <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Nama</th>
-                            <th>Nomor Pengajuan</th>
-                            <th>Nomor Anggota</th>
-                            <th>Nominal</th>
+                            {{-- <th>Nama</th> --}}
+                            <th>Kode Pinjaman</th>
+                            {{-- <th>Tgl Pinjam</th> --}}
+                            <th>No.Anggota</th>
+                            <th>Lama Angsuran</th>
+                            <th>Total Tagihan</th>
                             <th>Opsi</th>
                         </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $no = 1;
+                            @endphp
                         @foreach($pinjaman as $pinj)
                             <tr>
-                                {{-- <td>{{$peng+1}}</td> --}}
-                                {{-- <td>{{$peng->name}}</td> --}}
-                                {{-- <td>{{$peng->email}}</td> --}}
+                                <td>{{$no++}}</td>
+                                <td>{{$pinj->no_pinjaman}}</td>
+                                {{-- <td>{{$pinj->no_pengajuan}}</td> --}}
+                                {{-- <td>{{$pinj->tanggal_pinjam}}</td> --}}
+                                <td>{{$pinj->no_anggota}}</td>
+                                <td>{{$pinj->lama_angsuran}}</td>
+                                <td>{{$pinj->total_tagihan}}</td>
                                 <td>
                                     <a href="" class="btn btn-primary btn-xs">
                                         Edit
                                     </a>
+                                    <a class="btn btn-info btn-xs" href="{{ route('data-pinjaman.show', $pinj->id)}}">Show</a>
                                     <a href="" onclick="notificationBeforeDelete(event, this)" class="btn btn-danger btn-xs">
                                         Delete
                                     </a>

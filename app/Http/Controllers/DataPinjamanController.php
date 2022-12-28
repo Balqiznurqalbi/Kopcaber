@@ -37,13 +37,19 @@ class DataPinjamanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => ['required', 'string', 'max:200'],
-            'no_pengajuan' => 'required',
-            'no_anggota' => 'required',
+            // 'nama' => ['required', 'string', 'max:200'],
+            'no_pinjaman' => 'required',
+            'kode_pinjam' => 'required',
+            'tanggal_pinjam' => 'required',
             'jenis_pengajuan' => 'required',
-            'nominal' => 'required',
-            'lama_angsuran' => 'required',
-            'keterangan' => 'required',
+            'jatuh_tempo'=> 'required',
+            'no_anggota'=> 'required',
+            'jumlah_angsuran'=> 'required',
+            'jumlah_dibayar'=> 'required',
+            'sisa_angsuran'=> 'required',
+            'sisa_tagihan'=> 'required',
+            'jumlah_denda'=> 'required',
+            'total_tagihan'=> 'required',
         ]);
         DataPinjaman::create($request->all());
 
