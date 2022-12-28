@@ -62,9 +62,9 @@ class DataPinjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(DataPinjaman $pinjaman)
     {
-        return view('data-pinjaman.show');
+        return view('data-pinjaman.show', compact('pinjaman'));
     }
 
     /**
@@ -73,9 +73,9 @@ class DataPinjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(DataPinjaman $pinjaman)
     {
-        return view('data-pinjaman.edit');
+        return view('data-pinjaman.edit', compact('pinjaman'));
     }
 
     /**
@@ -88,13 +88,19 @@ class DataPinjamanController extends Controller
     public function update(Request $request, DataPinjaman $pinjaman)
     {
         $request->validate([
-            'nama' => ['required', 'string', 'max:200'],
+            // 'nama' => ['required', 'string', 'max:200'],
             'no_pinjaman' => 'required',
-            'no_anggota' => 'required',
-            'jenis_pinjaman' => 'required',
-            'nominal' => 'required',
-            'lama_angsuran' => 'required',
-            'keterangan' => 'required',
+            'kode_pinjam' => 'required',
+            'tanggal_pinjam' => 'required',
+            'jenis_pengajuan' => 'required',
+            'jatuh_tempo'=> 'required',
+            'no_anggota'=> 'required',
+            'jumlah_angsuran'=> 'required',
+            'jumlah_dibayar'=> 'required',
+            'sisa_angsuran'=> 'required',
+            'sisa_tagihan'=> 'required',
+            'jumlah_denda'=> 'required',
+            'total_tagihan'=> 'required',
         ]);
         $pinjaman->update($request->all());
 
