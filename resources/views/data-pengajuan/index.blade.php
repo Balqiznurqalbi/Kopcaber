@@ -20,6 +20,7 @@
                         <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Nama</th>
                             <th>Nomor Pengajuan</th>
                             <th>Nomor Anggota</th>
                             <th>Nama Anggota</th>
