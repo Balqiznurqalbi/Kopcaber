@@ -83,9 +83,9 @@ class DataPinjamanController extends Controller
     {
         $request->validate([
             'nama' => ['required', 'string', 'max:200'],
-            'no_pengajuan' => 'required',
+            'no_pinjaman' => 'required',
             'no_anggota' => 'required',
-            'jenis_pengajuan' => 'required',
+            'jenis_pinjaman' => 'required',
             'nominal' => 'required',
             'lama_angsuran' => 'required',
             'keterangan' => 'required',
