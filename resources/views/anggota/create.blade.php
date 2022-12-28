@@ -121,6 +121,7 @@
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword" placeholder="Password" name="password">
                         @error('password') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
+                    
                     <div class="form-group">
                         <label for="exampleInputPassword">Konfirmasi Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword" placeholder="Konfirmasi Password" name="password_confirmation">
