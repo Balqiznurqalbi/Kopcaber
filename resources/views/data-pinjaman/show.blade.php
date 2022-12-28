@@ -23,15 +23,36 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Nama:</strong>
-            {{-- {{ $sisw->name }} --}}
+            <strong>Nomor Pinjaman:</strong>
+            {{-- {{ $sisw->no_pinjaman }} --}}
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Nomor Pinjaman:</strong>
-            {{-- {{ $sisw->no_pinjaman }} --}}
+            <strong>Kode Pinjaman:</strong>
+            {{-- {{ $sisw->kode_pinjam }} --}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Tanggal Pinjaman:</strong>
+            {{-- {{ $sisw->tanggal_pinjam }} --}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Jenis Pengajuan:</strong>
+            {{-- {{ $sisw->jenis_pengajuan }} --}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Jatuh Tempo:</strong>
+            {{-- {{ $sisw->jatuh_tempo }} --}}
         </div>
     </div>
 
@@ -44,29 +65,36 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Jenis Pinjaman:</strong>
-            {{-- {{ $sisw->jenis_pinjaman }} --}}
+            <strong>Jumlah Angsuran</strong>
+            {{-- {{ $sisw->jumlah_angsuran }} --}}
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Nominal:</strong>
-            {{-- {{ $sisw->nominal }} --}}
+            <strong>Jumlah Dibayar:</strong>
+            {{-- {{ $sisw->jumlah_dibayar }} --}}
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Lama Angsuran:</strong>
-            {{-- {{ $sisw->lama_angsuran }} --}}
+            <strong>Sisa Angsuran:</strong>
+            {{-- {{ $sisw->sisa_angsuran }} --}}
         </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Keterangan</strong>
-            {{-- {{ $sisw->keterangan }} --}}
+            <strong>Jumlah Denda:</strong>
+            {{-- {{ $sisw->jumlah_denda }} --}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Total Tagihan:</strong>
+            {{-- {{ $sisw->total_tagihan }} --}}
         </div>
     </div>
 

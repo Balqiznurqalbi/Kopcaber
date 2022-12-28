@@ -15,15 +15,33 @@
                 <div class="card-body">
 
                     <div class="form-group">
-                        <label for="exampleInputName">Nama</label>
-                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan nama lengkap" name="nama" value="{{old('nama')}}">
-                        @error('nama') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-
-                    <div class="form-group">
                         <label for="exampleInputName">Nomor Pinjaman</label>
                         <input type="text" class="form-control @error('no_pinjaman') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan No. Pinjaman" name="no_pinjaman" value="{{old('no_pinjaman')}}">
                         @error('no_pinjaman') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">Kode Pinjaman</label>
+                        <input type="text" class="form-control @error('kode_pinjam') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Kode Pinjam" name="kode_pinjam" value="{{old('kode_pinjam')}}">
+                        @error('kode_pinjam') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">Tanggal Pinjam</label>
+                        <input type="text" class="form-control @error('tanggal_pinjam') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Tanggal Pinjaman" name="tanggal_pinjam" value="{{old('tanggal_pinjam')}}">
+                        @error('tanggal_pinjam') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">Jenis Pengajuan</label>
+                        <input type="text" class="form-control @error('jenis_pengajuan') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Biasa/Insidentil" name="jenis_pengajuan" value="{{old('jenis_pengajuan')}}">
+                        @error('jenis_pengajuan') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">Jatuh Tempo</label>
+                        <input type="text" class="form-control @error('jatuh_tempo') is-invalid @enderror" id="exampleInputName" placeholder="3 Bulan" name="jatuh_tempo" value="{{old('jatuh_tempo')}}">
+                        @error('jatuh_tempo') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
@@ -33,27 +51,33 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputName">Jenis Pinjaman</label>
-                        <input type="text" class="form-control @error('jenis_pinjaman') is-invalid @enderror" id="exampleInputName" placeholder="Contoh : Biasa/Insidentil" name="jenis_pinjaman" value="{{old('jenis_pinjaman')}}">
-                        @error('jenis_pinjaman') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="exampleInputName">Jumlah Angsuran</label>
+                        <input type="text" class="form-control @error('jumlah_angsuran') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Jumlah Angsuran" name="jumlah_angsuran" value="{{old('jumlah_angsuran')}}">
+                        @error('jumlah_angsuran') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputName">Nominal</label>
-                        <input type="text" class="form-control @error('nominal') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Jumlah Uang" name="nominal" value="{{old('nominal')}}">
-                        @error('nominal') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="exampleInputName">Jumlah Dibayar</label>
+                        <input type="text" class="form-control @error('jumlah_dibayar') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Jumlah" name="jumlah_dibayar" value="{{old('jumlah_dibayar')}}">
+                        @error('jumlah_dibayar') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputName">Lama Angsuran</label>
-                        <input type="text" class="form-control @error('lama_angsuran') is-invalid @enderror" id="exampleInputName" placeholder="3 bulan/ 6 bulan/ 12 bulan" name="lama_angsuran" value="{{old('lama_angsuran')}}">
-                        @error('lama_angsuran') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="exampleInputName">Sisa Angsuran</label>
+                        <input type="text" class="form-control @error('sisa_angsuran') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Sisa Angsuran" name="sisa_angsuran" value="{{old('sisa_angsuran')}}">
+                        @error('sisa_angsuran') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputName">Keterangan</label>
-                        <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Keterangan" name="keterangan" value="{{old('keterangan')}}">
-                        @error('keterangan') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="exampleInputName">Jumlah Denda</label>
+                        <input type="text" class="form-control @error('jumlah_denda') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Jumlah Denda" name="jumlah_denda" value="{{old('jumlah_denda')}}">
+                        @error('jumlah_denda') <span class="text-danger">{{$message}}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName">Total Tagihan</label>
+                        <input type="text" class="form-control @error('total_tagihan') is-invalid @enderror" id="exampleInputName" placeholder="Masukkan Total Tagihan" name="total_tagihan" value="{{old('total_tagihan')}}">
+                        @error('total_tagihan') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                 </div>
